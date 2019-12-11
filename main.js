@@ -55,12 +55,16 @@ function populateUnits(arr){
         
         
         // Create button
+        let divbutton = document.createElement("DIV");
+        divbutton.classList.add('width140');
+        divbutton.classList.add('inline');         
         let item = document.createElement("BUTTON");   
         item.classList.add('button');      
         item.innerText = arr[i].name;
         // When button is pressed call addItem (function like this so it doesn't automatically trigger)              
         item.onclick = function(){ addUnit(arr[i]); };
-        div.appendChild(item);
+        divbutton.appendChild(item);
+        div.appendChild(divbutton);
         
         // Create units
         let unitsSpan = document.createElement("P"); 
@@ -115,18 +119,18 @@ function addUnit(unitType){
     let div = document.createElement("DIV");
 
     let text = document.createElement("P");
-    text.classList.add('columnRight'); 
-    text.classList.add('width100');
+    text.classList.add('column'); 
+    text.classList.add('width140');
     let squadNameTextNode = document.createTextNode(unitType.name);
     text.appendChild(squadNameTextNode);
 
     let textUnits = document.createElement("P");
-    textUnits.classList.add('columnRight'); 
+    textUnits.classList.add('column'); 
     let unitsInSquadTextNode = document.createTextNode(squad.unitsInSquad);
     textUnits.appendChild(unitsInSquadTextNode);
 
     let textSquadCost = document.createElement("P");
-    textSquadCost.classList.add('columnRight'); 
+    textSquadCost.classList.add('column'); 
     let squadCostTextNode = document.createTextNode(squad.totalSquadPoints);
     textSquadCost.appendChild(squadCostTextNode);
     // + " " + squad.unitsInSquad +" " + squad.unitsInSquad);
