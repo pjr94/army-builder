@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Army Points Builder</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="flex-space-around">
+        <div class="info">
+            <h1>Max Points: <span id="max-points"></span> 
+                <input type="text" id="maxInput" value="">
+                <button onclick="updateMaxPoints()">Update Max</button>
+            </h1>
+            <div class="options">
+                <h2 class="column width100">Squads</h2>
+                <h2 class="column">Min</h2>
+                <h2 class="column">Max</h2>
+                <h2 class="column">Cost</h2>
+             </div>  
+             
+             <div id="hq-units"></div>
+            
+        </div>
+        
+        <div class="mid">
+            <h2 id="current-points"></h2>
+            <h2 class="column width100">Squads</h2>
+            <h2 class="column">Units</h2>
+            <h2 class="column">Cost</h2>
+            <div class="selections">
+                <div id="army-hq"></div>
+            </div>
+        </div>
+        <div id="weapons-list-options">
+            <h2>Weapons List</h2>
+        </div>
+        
+        <div id="instructions">
+            <h2>How to use</h2>
+            <ul>
+                <li>Choose maximum cost of army</li>
+                <ul>
+                    <li>Current points will turn red when max cost is exceeded</li>
+                </ul>
+                <li>Each Squad has a min and max number of units</li>
+                <li>Each Squad has a cost per unit</li>
+                <li>Once selected units can be added and removed from a Squad, or the whole squad can be removed</li>
+                <li>Each Squad can take one additional special weapon</li>
+                <li>List of units generated from array in unit-list.js</li>
+                <li>List of weapons generated from array in weapons-list.js</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    </div>
+
+    <script src="weapons-list.js"></script>
+    <script src="unit-list.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>

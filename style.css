@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.flex-space-around{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    width: 100px;
+    text-align: left;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+h1{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1em;
+}
+
+
+.column{
+    display: inline-block;
+    width: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.columnRight{
+    display: inline-block;
+    width: 35px;
+    margin: 0;
+    padding: 0;
+}
+.width100{
+    width:100px;
+}
+.width150{
+    width: 150px;
+}
+#maxInput{
+    width: 75px;
+    margin-left: 20px;
+}
+
+#instructions{
+    width: 20%;
+    background-color: #424756;
+    color: white;
+}
+
+.mid{
+    width: 30%;
+    text-align: left;
+    background-color: #e1d798;
+    min-height: 100vh;
+}
+
+.options{
+    margin-bottom: 5px;
+}
+#weapons-list-options{
+    width:10%;
+    background-color: #6ea171;
+}
+
+.info{
+    padding: 10px;
+    background-color: #4d784e;
+    min-height: 100vh;
+    width: 30%;
+}
