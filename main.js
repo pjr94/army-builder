@@ -20,7 +20,8 @@ function updateMaxPoints(){
         maxPoints = document.getElementById("maxInput").value;
         document.getElementById("max-points").innerHTML = maxPoints;
         document.getElementById("maxInput").value = "";
-    }  
+    }
+    updatePoints();  
 }
 
 // Holds info on each squad (not each individual unit)

@@ -12,8 +12,11 @@
         <div class="unit-options">
             <div class="top">
                 <h1>Max Points: <span id="max-points"></span> 
-                    <input type="text" id="maxInput" value="">
-                    <button onclick="updateMaxPoints()">Update Max</button>
+                    <div class="max">
+                        <input class="max-entry" type="text" id="maxInput" value="">
+                        <button class="max-entry" onclick="updateMaxPoints()">Update Max</button>
+                    </div>
+                    
                 </h1></div>
                 <div class="options">
                     <h2 class="column width140">Squads</h2>
@@ -35,7 +38,7 @@
                     <h2 class="column width140">Squads</h2>
                     <h2 class="column">Units</h2>
                     <h2 class="column">Cost</h2>
-                    <button class="remove-all-button" onclick="removeAll()">Remove All</button>
+                    <button class="remove-all-button float-right" onclick="removeAll()">Remove All</button>
                 </div>
                 
                 
