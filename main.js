@@ -108,7 +108,7 @@ function populateWeaponList(arr){
         document.getElementById("weapons-list-options").appendChild(p);
         document.getElementById("weapons-list-options").appendChild(p2);
     }
-
+    
 }
 
 // On click Add item (unit as in unit-type)
@@ -117,24 +117,25 @@ function addUnit(unitType){
     selectedSquads.push(squad);
     
     let div = document.createElement("DIV");
-
+    div.classList.add('selectedUnit'); 
+    
     let text = document.createElement("P");
     text.classList.add('column'); 
     text.classList.add('width140');
     let squadNameTextNode = document.createTextNode(unitType.name);
     text.appendChild(squadNameTextNode);
-
+    
     let textUnits = document.createElement("P");
     textUnits.classList.add('column'); 
     let unitsInSquadTextNode = document.createTextNode(squad.unitsInSquad);
     textUnits.appendChild(unitsInSquadTextNode);
-
+    
     let textSquadCost = document.createElement("P");
     textSquadCost.classList.add('column'); 
     let squadCostTextNode = document.createTextNode(squad.totalSquadPoints);
     textSquadCost.appendChild(squadCostTextNode);
     // + " " + squad.unitsInSquad +" " + squad.unitsInSquad);
-
+    
     
     div.appendChild(text);
     div.appendChild(textUnits);
@@ -152,7 +153,7 @@ function addUnit(unitType){
         updatePoints();
         unitsInSquadTextNode.nodeValue =  squad.unitsInSquad;
         squadCostTextNode.nodeValue = squad.totalSquadPoints;
-
+        
         if (squad.unitsInSquad >= unitType.maxUnits){
             plus.disabled = true;
         }
@@ -176,7 +177,7 @@ function addUnit(unitType){
         updatePoints();
         unitsInSquadTextNode.nodeValue = squad.unitsInSquad;
         squadCostTextNode.nodeValue = squad.totalSquadPoints;
-
+        
         // If squad is less than max
         if (squad.unitsInSquad < unitType.maxUnits){
             plus.disabled = false;
@@ -224,19 +225,19 @@ function addWeapon(squad, squadCostTextNode){
         weapon.appendChild(weaponText);
         options.appendChild(weapon);
     }
-  
+    
     return options; 
 }
 
 // t as in "this" option
 function weaponSelect(t, squad){
     let index = findWithAttr(weapons, "name", t.value);
-
+    
     if (index == -1){
         squad.weaponPoints = 0;
     } else {
         squad.weaponPoints = weapons[index].points;
-  //      console.log(squad.unitPoints + " + " + weapons[index].name + " " + squad.weaponPoints + " + " + squad.totalSquadPoints);
+        //      console.log(squad.unitPoints + " + " + weapons[index].name + " " + squad.weaponPoints + " + " + squad.totalSquadPoints);
     }
     updatePoints();
     
@@ -264,6 +265,19 @@ function findWithAttr(array, attr, value) {
     }
     return -1;
 }
+
+function removeAll(){
+    // Empty array
+    selectedSquads = [];
+    updatePoints();
+
+    // remove divs
+    let div = document.getElementsByClassName("selectedUnit");
+    while(div.length > 0){
+        div[0].parentNode.removeChild(div[0]);
+    }
+}
+
 
 // Init
 updatePoints(0);

@@ -108,3 +108,9 @@ p, li{
     margin-top: -10px;
  /*  min-height: 70px;*/
 }
+
+.remove-all-button{
+    float: right;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
