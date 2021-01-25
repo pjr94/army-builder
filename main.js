@@ -33,11 +33,12 @@ function updatePoints(){
         currentPoints += selectedSquads[i].totalSquadPoints;
     }
     //   currentPoints += par;
-    document.getElementById("current-points").innerHTML =  "Current Points: " + currentPoints; 
+    document.getElementById("current-points").innerHTML =  "Current Points: " + currentPoints;
+    
     if (currentPoints > maxPoints){
         document.getElementById("current-points").style.color = "red";
     } else {
-        document.getElementById("current-points").style.color = "initial";
+        document.getElementById("current-points").style.color = "aliceblue";
     }
 }
 

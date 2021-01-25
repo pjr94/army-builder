@@ -29,8 +29,12 @@ h1{
 h2{
     font-size: 1.4em;
 }
+h1, h2, li{
+    color:aliceblue;
+}
+
 p, li{
-    
+    font-size: 1.2em;
 }
 
 .float-right{
@@ -83,6 +87,11 @@ p, li{
     background-color: #e1d798;
     min-height: 100vh;
     padding-left: 10px;
+  
+}
+
+.black{
+    color: black;
 }
 
 .options{
@@ -94,6 +103,7 @@ p, li{
     background-color: #6ea171;
     padding-left: 10px;
     min-width: 170px;
+    color:aliceblue;
 }
 
 .unit-options{
@@ -102,6 +112,7 @@ p, li{
     background-color: #4d784e;
     min-height: 100vh;
     min-width: 320px;
+    color: aliceblue;
 }
 
 .top{
@@ -110,7 +121,7 @@ p, li{
     padding: 10px;
     margin-left: -10px;
     margin-top: -10px;
-    /*  min-height: 60px; */
+      min-height: 70px; 
 }
 .top-mid{
     background-color:  	#675645;
@@ -118,7 +129,14 @@ p, li{
     padding: 10px;
     margin-left: -10px;
     margin-top: -10px;
+    min-height: 70px; 
+
+    
     /*  min-height: 70px;*/
+}
+
+.selections{
+    color:black;
 }
 
 .remove-all-button{

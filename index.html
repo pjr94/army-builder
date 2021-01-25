@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Army Points Builder</title>
     <link rel="stylesheet" href="style.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="A pure JS army points builder for a tabletop game">
 </head>
 <body>
     
@@ -13,11 +14,12 @@
             <div class="top">
                 <h1>Max Points: <span id="max-points"></span> 
                     <div class="max">
-                        <input class="max-entry" type="text" id="maxInput" value="">
+                        <input class="max-entry" type="text" id="maxInput" value="" >
                         <button class="max-entry" onclick="updateMaxPoints()">Update Max</button>
                     </div>
                     
-                </h1></div>
+                </h1>
+            </div>
                 <div class="options">
                     <h2 class="column2 width140">Squads</h2>
                     <h2 class="column2">Min</h2>
@@ -35,9 +37,9 @@
                     
                 </div>
                 <div class="options">
-                    <h2 class="column2 width140">Squads</h2>
-                    <h2 class="column2">Units</h2>
-                    <h2 class="column2">Cost</h2>
+                    <h2 class="black column2 width140">Squads</h2>
+                    <h2 class="black column2">Units</h2>
+                    <h2 class="black column2">Cost</h2>
                     <button class="remove-all-button float-right" onclick="removeAll()">Remove All</button>
                 </div>
                 
